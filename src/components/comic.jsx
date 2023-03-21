@@ -4,6 +4,7 @@ import axios from "axios";
 export default function Comic() {
   const [comic, setComic] = useState("");
 
+  // function to hit server, returning a random comic
   const getImage = () => {
     axios
       .get("http://localhost:8000/comic",
@@ -11,9 +12,12 @@ export default function Comic() {
       .then(({ data }) => setComic(data.img))
       .catch((err) => console.log(err))
   }
+
+  // on page load
   useEffect(() => {
     getImage();
   }, []);
+
   return (
     <section>
       <div className="comic-text">
