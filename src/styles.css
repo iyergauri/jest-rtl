@@ -7,8 +7,10 @@ button {
 
 .heading {
   width: fit-content;
-  margin: 0 auto;
-  padding: 1em 0;
+  margin: 1em auto;
+  padding: 6px 2em;
+  border-radius: 60px;
+  border: 2px lightgray solid;
 }
 
 .content {
@@ -16,15 +18,25 @@ button {
   width: fit-content;
   gap: 2em;
   display: flex;
-  flex-direction: row;
-}
-
-.counter {
-  display: flex;
   flex-direction: column;
 }
 
+.counter,
+.comic-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 button {
+  border-radius: 12px;
   height: fit-content;
-  margin: 0 auto;
+  margin: auto 1em;
+  border: 2px lightgray solid;
+  cursor: pointer;
+}
+
+.comic {
+  max-height: 400px;
+  max-width: 600px;
 }
