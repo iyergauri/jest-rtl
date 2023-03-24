@@ -3,7 +3,7 @@ import { render, fireEvent, screen } from '@testing-library/react';
 
 import Counter from '../components/counter.jsx'
 
-describe('renders all pieces to frontend', () => {
+describe('renders an interactive counter button', () => {
 
   it('should render the counter button', () => {
     render(<Counter />);
