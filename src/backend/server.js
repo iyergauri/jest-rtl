@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 
 // runs if http://localhost:8000/comic is hit
-app.get('/comic', cors(corsOptions), async (_, res) => {
+app.get('/comic', cors(), async (_, res) => {
   const rand = Math.floor(Math.random() * maxComics);
   axios
     .get(`https://xkcd.com/${rand}/info.0.json`)
